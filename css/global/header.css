@@ -8,11 +8,9 @@
   gap: 20px;
   flex-wrap: wrap;
   justify-content: space-between;
-  box-sizing: border-box;
   align-items: center;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .header-menu {
