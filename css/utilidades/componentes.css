@@ -6,7 +6,8 @@
   margin: 0 auto;
 }
 .botao,
-.botao-sec {
+.botao-sec,
+.botao-seta {
   display: inline-block;
   padding: 16px 32px;
   border-radius: 4px;
@@ -28,9 +29,26 @@
 .botao-sec:hover {
   background-color: var(--cor-9);
 }
+.botao-seta {
+  display: flex;
+  align-items: center;
+}
+.botao-seta::after {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 10px;
+  margin-left: 12px;
+  background: url("../../img/icones/seta.svg");
+  transition: transform 0.2s;
+}
+.botao-seta:hover::after {
+  transform: translateX(4px);
+}
 @media (max-width: 600px) {
   .botao,
-  .botao-sec {
+  .botao-sec,
+  .botao-seta {
     padding: 12px 16px;
     font-size: 1rem;
   }
@@ -52,4 +70,25 @@
 
 .link:hover {
   color: var(--cor-0);
+}
+/* titulo interno */
+.titulo-bg {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--cor-11);
+}
+.titulo {
+  margin-bottom: 4px;
+}
+
+@media (max-width: 800px) {
+  .titulo-bg {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .titulo p {
+    font-size: 1rem;
+    text-transform: lowercase;
+    font-weight: 400;
+  }
 }
